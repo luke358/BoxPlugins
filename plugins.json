@@ -2,7 +2,7 @@
   "plugins": [
     {
       "name": "樱花动漫",
-      "url": "",
+      "url": "https://raw.githubusercontent.com/luke358/BoxPlugins/main/yhdm/index.js",
       "version": "0.1.0"
     }
   ]
