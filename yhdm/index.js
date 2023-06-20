@@ -10,7 +10,7 @@ function videoComplete({result}) {
 }
 module.exports = {
   platform: '樱花动漫',
-  version: "0.1.1",
+  version: "0.1.2",
   srcUrl: "xxxxx",
   searchInjectCode: `
     const lis = document.querySelectorAll('li.item')
