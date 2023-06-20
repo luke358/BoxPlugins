@@ -11,7 +11,7 @@ function videoComplete({result}) {
 module.exports = {
   platform: '樱花动漫',
   version: "0.1.2",
-  srcUrl: "",
+  srcUrl: "xxxxx",
   searchInjectCode: `
     const lis = document.querySelectorAll('li.item')
     const data = Array.from(lis).map(li => {
