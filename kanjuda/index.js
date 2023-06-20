@@ -10,6 +10,7 @@ function videoComplete({ result }) {
 }
 module.exports = {
   platform: '起飞影视',
+  version: "0.1.0",
   searchInjectCode: `
     const lis = document.querySelectorAll('#searchList li')
 
