@@ -9,7 +9,7 @@ function videoComplete({ result }) {
   return JSON.parse(result)
 }
 module.exports = {
-  platform: '起飞影视',
+  platform: '看剧吧',
   version: "0.1.0",
   searchInjectCode: `
     const lis = document.querySelectorAll('#searchList li')
