@@ -11,24 +11,24 @@ function videoComplete({result}) {
 module.exports = {
   platform: '樱花动漫',
   searchInjectCode: `
-        const lis = document.querySelectorAll('li.item')
-        const data = Array.from(lis).map(li => {
-          const href = li.querySelector('a').href;
-          const imgblock = li.querySelector('.imgblock');
-          const computedStyle = getComputedStyle(imgblock);
-          const backgroundImage = computedStyle.getPropertyValue('background-image');
-          
-          const urlStartIndex = backgroundImage.indexOf('url("') + 5;
-          const urlEndIndex = backgroundImage.lastIndexOf('")');
-          const pic = backgroundImage.slice(urlStartIndex, urlEndIndex);
+    const lis = document.querySelectorAll('li.item')
+    const data = Array.from(lis).map(li => {
+      const href = li.querySelector('a').href;
+      const imgblock = li.querySelector('.imgblock');
+      const computedStyle = getComputedStyle(imgblock);
+      const backgroundImage = computedStyle.getPropertyValue('background-image');
       
-          const title = li.querySelector('.itemtext').textContent
-          return {
-            href,pic,title
-          }
-        });
-        // alert(document.documentElement.innerHTML);
-        window.ReactNativeWebView.postMessage(JSON.stringify({data, isEnd: true}));
+      const urlStartIndex = backgroundImage.indexOf('url("') + 5;
+      const urlEndIndex = backgroundImage.lastIndexOf('")');
+      const pic = backgroundImage.slice(urlStartIndex, urlEndIndex);
+  
+      const title = li.querySelector('.itemtext').textContent
+      return {
+        href,pic,title
+      }
+    });
+    // alert(document.documentElement.innerHTML);
+    window.ReactNativeWebView.postMessage(JSON.stringify({data, isEnd: true}));
   `,
     searchUrl: 'https://www.yhdmz.org/s_all?ex=1&kw={{kw}}', 
     searchComplete,
